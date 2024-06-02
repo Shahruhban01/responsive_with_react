@@ -1,38 +1,120 @@
-.App {
+.main {
+  position: fixed;
+  padding: 10px;
+  background-color: gray;
+  width: 80%;
+  height: 100vh;
+  margin: 0;
+  text-align: left;
+  left: -100%;
+  transition: 0.5s;
+}
+
+.main ul li {
+  list-style: none;
+  padding: 10px 0px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.showMenu {
+  left: 0%;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 0px;
+  }
+}
+
+.modalOverlay {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+.ModalDiv {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  transition: 0.5s;
+  top: -500%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+
+.showModalDiv {
+  top: 50%;
+}
+
+.showModalOverlay {
+  display: block;
+}
+
+.enquire_btn {
+  transform: rotate(90deg);
+  position: fixed;
+  right: -1%;
+  top: 10%;
+}
+
+.signup-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.signup-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.form-group {
+  margin-bottom: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.form-group button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-group button:hover {
+  background-color: #218838;
 }
