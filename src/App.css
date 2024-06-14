@@ -1,8 +1,17 @@
+* {
+  /* padding: 0; */
+  margin: 0;
+}
+
 .main {
   position: fixed;
   padding: 10px;
-  background-color: gray;
-  width: 80%;
+  background: rgb(5, 5, 46);
+  /* background: content-box; */
+  color: white;
+  font-weight: bold;
+  opacity: 200%;
+  width: 60%;
   height: 100vh;
   margin: 0;
   text-align: left;
@@ -19,6 +28,21 @@
   display: none;
 }
 
+.enquire_cross {
+  position: absolute;
+  right: 3px;
+  top: 1px;
+  margin: 5px;
+  width: 35px;
+  height: 35px;
+  background: rgb(16, 16, 133);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .showMenu {
   left: 0%;
 }
@@ -28,6 +52,19 @@
     display: block;
     position: absolute;
     right: 0px;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    background: rgb(16, 16, 133);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .enquire_cross {
+    right: 45px;
+
   }
 }
 
@@ -48,7 +85,7 @@
   align-items: center;
   height: 100vh;
   margin: 0;
-  
+
   position: fixed;
   width: 500px;
   height: 500px;
@@ -72,6 +109,20 @@
   position: fixed;
   right: -1%;
   top: 10%;
+  border: none;
+  margin-top: 5px;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgb(16, 16, 133);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .enquire_btn {
+    margin-top: 20px;
+    right: -6%;
+  }
 }
 
 .signup-form {
@@ -117,4 +168,43 @@
 
 .form-group button:hover {
   background-color: #218838;
+}
+
+.faqOuter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* width: 1320px; */
+  margin: auto;
+}
+
+.faqItems {
+  border: 1px solid red;
+  width: 95%;
+  margin-bottom: 10px;
+  /* height: 42px; */
+}
+
+.faqItems h2 {
+  margin: 0px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #282c34;
+  color: white;
+  text-align: left;
+}
+
+.faqItems p {
+  text-align: left;
+  height: 0px;
+  transition: 0.5s;
+  margin: 0px;
+  transform: scaleY(0);
+  padding: 0px;
+}
+
+.activeItem {
+  height: auto !important;
+  transform: scaleY(1) !important;
+  padding: 10px !important;
 }
